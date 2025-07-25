@@ -1,26 +1,54 @@
+
 @import "tailwindcss";
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FEFAF3;
+  --text: #1E1E1E;
+  --stroke: #D5B896;
+  --main: #273323; 
+
+
+
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: Nothing You Could Do, cursive;
+  --font-montserrat: Montserrat, sans-serif;
+  --font-size-p: 1rem;
+  --font-size-h1: 5rem;
+  --font-size-h2: 3rem;
+  --color-text: var(--text);
+  --color-stroke: var(--stroke);
+  --color-main: var(--main);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@layer components {
+    p {
+      font-family: var(--font-body);
+      font-size: var(--font-size-p);
+      color: var(--color-main);
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-size: var(--font-size-h1);
+      color: var(--color-foreground);
+    }
+    h2 {
+      font-family: var(--font-display);
+      font-size: var(--font-size-h2);
+      color: var(--color-foreground);
+    }
+    a {
+      font-family: var(--font-body);
+      font-size: var(--font-size-p);
+      color: var(--color-main);
+    }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
